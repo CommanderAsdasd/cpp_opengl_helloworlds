@@ -2,6 +2,7 @@
 
 // GLAD
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 
 // GLFW
 #include <GLFW/glfw3.h>
@@ -24,6 +25,15 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
+    // stf::cout << ""
+    GLuint vertshader = glCreateShader(GL_VERTEX_SHADER);
+    if (vertshader == 0) {
+        fprintf(stderr, "Failed to create vertex shader");
+        exit(EXIT_FAILURE);
+    }
+    
+    glm::vec4 position = glm::vec4(1.0f, 1.0f, 1.0f, 1.0);
+    // std::cout << (std::string)position;
     std::cout << "Starting GLFW context, OpenGL 3.3" << std::endl;
     // Init GLFW
     glfwInit();

@@ -1,5 +1,8 @@
 // badprog.com
 #include <GL/freeglut.h>
+#include <glad/glad.h>
+// GLFW
+// #include <GLFW/glfw3.h>
 
 void displayMe(void)
 {
@@ -7,7 +10,7 @@ void displayMe(void)
     glBegin(GL_POLYGON);
         glVertex3f(0.0, 0.0, 0.0);
         glVertex3f(0.5, 0.0, 0.0);
-        glVertex3f(0.5, 0.5, 0.0);
+        glVertex3f(0.5, 0.1, 0.0);
         glVertex3f(0.0, 0.5, 0.0);
     glEnd();
     glFlush();
@@ -18,8 +21,8 @@ int main(int argc, char** argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE);
     glutInitWindowSize(300, 300);
-    glutInitWindowPosition(100, 100);
-    glutCreateWindow("Hello world from Badprog.com :D");
+    glutInitWindowPosition(200, 100);
+    glutCreateWindow("Asdasdasd");
     glutDisplayFunc(displayMe);
     glutMainLoop();
     return 0;
